@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: yemregumuspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yemregumuspipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: yemregumuspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: yemregumuspipelinesjavascriptdocker 
+          image: a2containerregistryyunusgumus.azurecr.io/yemregumuspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
